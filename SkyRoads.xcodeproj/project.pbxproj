@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58500F071DCE0953007B66E7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58500F061DCE0953007B66E7 /* Reachability.swift */; };
+		589504A11DCDD8DA00B29F64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504A01DCDD8DA00B29F64 /* AppDelegate.swift */; };
+		589504A31DCDD8DA00B29F64 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 589504A21DCDD8DA00B29F64 /* art.scnassets */; };
+		589504AA1DCDD8DA00B29F64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589504A91DCDD8DA00B29F64 /* Assets.xcassets */; };
+		589504AD1DCDD8DA00B29F64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589504AB1DCDD8DA00B29F64 /* LaunchScreen.storyboard */; };
+		589504B81DCDD93200B29F64 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589504B41DCDD93200B29F64 /* FBSDKLoginKit.framework */; };
+		589504B91DCDD93200B29F64 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589504B51DCDD93200B29F64 /* FBSDKShareKit.framework */; };
+		589504BA1DCDD93200B29F64 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589504B61DCDD93200B29F64 /* FBSDKCoreKit.framework */; };
+		589504BB1DCDD93200B29F64 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589504B71DCDD93200B29F64 /* Bolts.framework */; };
+		589504C31DCDDA2200B29F64 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504BC1DCDDA2200B29F64 /* Constants.swift */; };
+		589504C41DCDDA2200B29F64 /* CoreDataFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504BD1DCDDA2200B29F64 /* CoreDataFunctions.swift */; };
+		589504C51DCDDA2200B29F64 /* HS+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504BE1DCDDA2200B29F64 /* HS+CoreDataClass.swift */; };
+		589504C61DCDDA2200B29F64 /* HS+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504BF1DCDDA2200B29F64 /* HS+CoreDataProperties.swift */; };
+		589504C71DCDDA2200B29F64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589504C01DCDDA2200B29F64 /* Main.storyboard */; };
+		589504C81DCDDA2200B29F64 /* Netw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504C11DCDDA2200B29F64 /* Netw.swift */; };
+		589504C91DCDDA2200B29F64 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504C21DCDDA2200B29F64 /* TableViewController.swift */; };
+		589504CC1DCDDA7000B29F64 /* bridgee.m in Sources */ = {isa = PBXBuildFile; fileRef = 589504CB1DCDDA7000B29F64 /* bridgee.m */; };
+		589504D11DCDDB6900B29F64 /* SkyRoads.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 589504CF1DCDDB6900B29F64 /* SkyRoads.xcdatamodeld */; };
+		589504D41DCDDC8400B29F64 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504D31DCDDC8400B29F64 /* InitialViewController.swift */; };
+		589504D61DCDDD1400B29F64 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504D51DCDDD1400B29F64 /* GameViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		58500F061DCE0953007B66E7 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		586D2C871DCF2047000F738E /* SkyRoads.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkyRoads.entitlements; sourceTree = "<group>"; };
+		5895049D1DCDD8DA00B29F64 /* SkyRoads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyRoads.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		589504A01DCDD8DA00B29F64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		589504A21DCDD8DA00B29F64 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		589504A91DCDD8DA00B29F64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		589504AC1DCDD8DA00B29F64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		589504AE1DCDD8DA00B29F64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		589504B41DCDD93200B29F64 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		589504B51DCDD93200B29F64 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		589504B61DCDD93200B29F64 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		589504B71DCDD93200B29F64 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		589504BC1DCDDA2200B29F64 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		589504BD1DCDDA2200B29F64 /* CoreDataFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataFunctions.swift; sourceTree = "<group>"; };
+		589504BE1DCDDA2200B29F64 /* HS+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HS+CoreDataClass.swift"; sourceTree = "<group>"; };
+		589504BF1DCDDA2200B29F64 /* HS+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HS+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		589504C01DCDDA2200B29F64 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		589504C11DCDDA2200B29F64 /* Netw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Netw.swift; sourceTree = "<group>"; };
+		589504C21DCDDA2200B29F64 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		589504CA1DCDDA7000B29F64 /* SkyRoads-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SkyRoads-Bridging-Header.h"; sourceTree = "<group>"; };
+		589504CB1DCDDA7000B29F64 /* bridgee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bridgee.m; sourceTree = "<group>"; };
+		589504D01DCDDB6900B29F64 /* SkyRoads.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SkyRoads.xcdatamodel; sourceTree = "<group>"; };
+		589504D31DCDDC8400B29F64 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		589504D51DCDDD1400B29F64 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5895049A1DCDD8DA00B29F64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589504B91DCDD93200B29F64 /* FBSDKShareKit.framework in Frameworks */,
+				589504BA1DCDD93200B29F64 /* FBSDKCoreKit.framework in Frameworks */,
+				589504B81DCDD93200B29F64 /* FBSDKLoginKit.framework in Frameworks */,
+				589504BB1DCDD93200B29F64 /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		589504941DCDD8DA00B29F64 = {
+			isa = PBXGroup;
+			children = (
+				5895049F1DCDD8DA00B29F64 /* SkyRoads */,
+				5895049E1DCDD8DA00B29F64 /* Products */,
+				589504B41DCDD93200B29F64 /* FBSDKLoginKit.framework */,
+				589504B51DCDD93200B29F64 /* FBSDKShareKit.framework */,
+				589504B61DCDD93200B29F64 /* FBSDKCoreKit.framework */,
+				589504B71DCDD93200B29F64 /* Bolts.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		5895049E1DCDD8DA00B29F64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5895049D1DCDD8DA00B29F64 /* SkyRoads.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5895049F1DCDD8DA00B29F64 /* SkyRoads */ = {
+			isa = PBXGroup;
+			children = (
+				586D2C871DCF2047000F738E /* SkyRoads.entitlements */,
+				589504CD1DCDDB0E00B29F64 /* Networking */,
+				589504A01DCDD8DA00B29F64 /* AppDelegate.swift */,
+				589504BC1DCDDA2200B29F64 /* Constants.swift */,
+				589504C01DCDDA2200B29F64 /* Main.storyboard */,
+				589504D31DCDDC8400B29F64 /* InitialViewController.swift */,
+				589504D51DCDDD1400B29F64 /* GameViewController.swift */,
+				589504C21DCDDA2200B29F64 /* TableViewController.swift */,
+				589504A21DCDD8DA00B29F64 /* art.scnassets */,
+				589504CE1DCDDB1700B29F64 /* CoreData */,
+				589504D21DCDDBD000B29F64 /* support */,
+			);
+			path = SkyRoads;
+			sourceTree = "<group>";
+		};
+		589504CD1DCDDB0E00B29F64 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				58500F061DCE0953007B66E7 /* Reachability.swift */,
+				589504CB1DCDDA7000B29F64 /* bridgee.m */,
+				589504CA1DCDDA7000B29F64 /* SkyRoads-Bridging-Header.h */,
+				589504C11DCDDA2200B29F64 /* Netw.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		589504CE1DCDDB1700B29F64 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				589504BE1DCDDA2200B29F64 /* HS+CoreDataClass.swift */,
+				589504BF1DCDDA2200B29F64 /* HS+CoreDataProperties.swift */,
+				589504CF1DCDDB6900B29F64 /* SkyRoads.xcdatamodeld */,
+				589504BD1DCDDA2200B29F64 /* CoreDataFunctions.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		589504D21DCDDBD000B29F64 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				589504A91DCDD8DA00B29F64 /* Assets.xcassets */,
+				589504AB1DCDD8DA00B29F64 /* LaunchScreen.storyboard */,
+				589504AE1DCDD8DA00B29F64 /* Info.plist */,
+			);
+			name = support;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5895049C1DCDD8DA00B29F64 /* SkyRoads */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 589504B11DCDD8DA00B29F64 /* Build configuration list for PBXNativeTarget "SkyRoads" */;
+			buildPhases = (
+				589504991DCDD8DA00B29F64 /* Sources */,
+				5895049A1DCDD8DA00B29F64 /* Frameworks */,
+				5895049B1DCDD8DA00B29F64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkyRoads;
+			productName = SkyRoads;
+			productReference = 5895049D1DCDD8DA00B29F64 /* SkyRoads.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		589504951DCDD8DA00B29F64 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "forever knights";
+				TargetAttributes = {
+					5895049C1DCDD8DA00B29F64 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 3466M5TT35;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 589504981DCDD8DA00B29F64 /* Build configuration list for PBXProject "SkyRoads" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 589504941DCDD8DA00B29F64;
+			productRefGroup = 5895049E1DCDD8DA00B29F64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5895049C1DCDD8DA00B29F64 /* SkyRoads */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5895049B1DCDD8DA00B29F64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589504A31DCDD8DA00B29F64 /* art.scnassets in Resources */,
+				589504AD1DCDD8DA00B29F64 /* LaunchScreen.storyboard in Resources */,
+				589504AA1DCDD8DA00B29F64 /* Assets.xcassets in Resources */,
+				589504C71DCDDA2200B29F64 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		589504991DCDD8DA00B29F64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589504C51DCDDA2200B29F64 /* HS+CoreDataClass.swift in Sources */,
+				589504D41DCDDC8400B29F64 /* InitialViewController.swift in Sources */,
+				58500F071DCE0953007B66E7 /* Reachability.swift in Sources */,
+				589504CC1DCDDA7000B29F64 /* bridgee.m in Sources */,
+				589504D11DCDDB6900B29F64 /* SkyRoads.xcdatamodeld in Sources */,
+				589504C81DCDDA2200B29F64 /* Netw.swift in Sources */,
+				589504C91DCDDA2200B29F64 /* TableViewController.swift in Sources */,
+				589504A11DCDD8DA00B29F64 /* AppDelegate.swift in Sources */,
+				589504C41DCDDA2200B29F64 /* CoreDataFunctions.swift in Sources */,
+				589504C61DCDDA2200B29F64 /* HS+CoreDataProperties.swift in Sources */,
+				589504D61DCDDD1400B29F64 /* GameViewController.swift in Sources */,
+				589504C31DCDDA2200B29F64 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		589504AB1DCDD8DA00B29F64 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				589504AC1DCDD8DA00B29F64 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		589504AF1DCDD8DA00B29F64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		589504B01DCDD8DA00B29F64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		589504B21DCDD8DA00B29F64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SkyRoads/SkyRoads.entitlements;
+				DEVELOPMENT_TEAM = 3466M5TT35;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = SkyRoads/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ForeverKnights.SkyRoads;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SkyRoads/SkyRoads-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		589504B31DCDD8DA00B29F64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SkyRoads/SkyRoads.entitlements;
+				DEVELOPMENT_TEAM = 3466M5TT35;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = SkyRoads/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ForeverKnights.SkyRoads;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SkyRoads/SkyRoads-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		589504981DCDD8DA00B29F64 /* Build configuration list for PBXProject "SkyRoads" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				589504AF1DCDD8DA00B29F64 /* Debug */,
+				589504B01DCDD8DA00B29F64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		589504B11DCDD8DA00B29F64 /* Build configuration list for PBXNativeTarget "SkyRoads" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				589504B21DCDD8DA00B29F64 /* Debug */,
+				589504B31DCDD8DA00B29F64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		589504CF1DCDDB6900B29F64 /* SkyRoads.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				589504D01DCDDB6900B29F64 /* SkyRoads.xcdatamodel */,
+			);
+			currentVersion = 589504D01DCDDB6900B29F64 /* SkyRoads.xcdatamodel */;
+			path = SkyRoads.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 589504951DCDD8DA00B29F64 /* Project object */;
+}
