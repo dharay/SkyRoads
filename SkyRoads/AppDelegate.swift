@@ -16,9 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
 	
 	
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
-		return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)// - See more at: http://www.theappguruz.com/blog/facebook-integration-using-swift#sthash.JS6xcphe.dpuf
+	return true
 	}
 	
 	func applicationWillResignActive(_ application: UIApplication) {
@@ -42,14 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationWillTerminate(_ application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 		// Saves changes in the application's managed object context before the application terminates.
-		let loginManager: FBSDKLoginManager = FBSDKLoginManager()
-		loginManager.logOut()
+		
 		//	- See more at: http://www.theappguruz.com/blog/facebook-integration-using-swift#sthash.JS6xcphe.dpuf
 		self.saveContext()
 	}
-	func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-		return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
-	}
+
 	
 	// MARK: - Core Data stack
 	

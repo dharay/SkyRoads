@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1C198F70-E186-4774-B9D9-8E31B733B3E3"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "786E3570-C0B6-477A-A213-6CBA1898EBAF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyRoads/GameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "gameOver()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "607AA7C1-8349-47AD-8B84-2A348DBF968E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyRoads/Constants.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "gameOverAlert(score:VC:message:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "607AA7C1-8349-47AD-8B84-2A348DBF968E - 170bca313acc9caa"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SkyRoads.gameOverAlert(score: Swift.Int, VC: __C.UIViewController, message: Swift.String) -&gt; ()"
+                  moduleName = "SkyRoads"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dharay/Documents/SkyRoads/SkyRoads/Constants.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "577">
+               </Location>
+               <Location
+                  uuid = "607AA7C1-8349-47AD-8B84-2A348DBF968E - e3d1229fc94ef9e6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in SkyRoads.gameOverAlert(score: Swift.Int, VC: __C.UIViewController, message: Swift.String) -&gt; ()"
+                  moduleName = "SkyRoads"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dharay/Documents/SkyRoads/SkyRoads/Constants.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2F97F54-A96C-40C4-B59B-DC17B9375F57"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyRoads/GameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
+            landmarkName = "gameOver()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B2F97F54-A96C-40C4-B59B-DC17B9375F57 - decf04d7b7c67266"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in SkyRoads.GameViewController.gameOver() -&gt; ()"
+                  moduleName = "SkyRoads"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dharay/Documents/SkyRoads/SkyRoads/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "289"
+                  endingLineNumber = "289"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "B2F97F54-A96C-40C4-B59B-DC17B9375F57 - c939a80fe387507a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #3 () -&gt; () in SkyRoads.GameViewController.gameOver() -&gt; ()"
+                  moduleName = "SkyRoads"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dharay/Documents/SkyRoads/SkyRoads/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "289"
+                  endingLineNumber = "289"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

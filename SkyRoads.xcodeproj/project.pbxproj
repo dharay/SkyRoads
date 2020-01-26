@@ -12,10 +12,6 @@
 		589504A31DCDD8DA00B29F64 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 589504A21DCDD8DA00B29F64 /* art.scnassets */; };
 		589504AA1DCDD8DA00B29F64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589504A91DCDD8DA00B29F64 /* Assets.xcassets */; };
 		589504AD1DCDD8DA00B29F64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589504AB1DCDD8DA00B29F64 /* LaunchScreen.storyboard */; };
-		589504B81DCDD93200B29F64 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589504B41DCDD93200B29F64 /* FBSDKLoginKit.framework */; };
-		589504B91DCDD93200B29F64 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589504B51DCDD93200B29F64 /* FBSDKShareKit.framework */; };
-		589504BA1DCDD93200B29F64 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589504B61DCDD93200B29F64 /* FBSDKCoreKit.framework */; };
-		589504BB1DCDD93200B29F64 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589504B71DCDD93200B29F64 /* Bolts.framework */; };
 		589504C31DCDDA2200B29F64 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504BC1DCDDA2200B29F64 /* Constants.swift */; };
 		589504C41DCDDA2200B29F64 /* CoreDataFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504BD1DCDDA2200B29F64 /* CoreDataFunctions.swift */; };
 		589504C51DCDDA2200B29F64 /* HS+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504BE1DCDDA2200B29F64 /* HS+CoreDataClass.swift */; };
@@ -23,7 +19,6 @@
 		589504C71DCDDA2200B29F64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589504C01DCDDA2200B29F64 /* Main.storyboard */; };
 		589504C81DCDDA2200B29F64 /* Netw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504C11DCDDA2200B29F64 /* Netw.swift */; };
 		589504C91DCDDA2200B29F64 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504C21DCDDA2200B29F64 /* TableViewController.swift */; };
-		589504CC1DCDDA7000B29F64 /* bridgee.m in Sources */ = {isa = PBXBuildFile; fileRef = 589504CB1DCDDA7000B29F64 /* bridgee.m */; };
 		589504D11DCDDB6900B29F64 /* SkyRoads.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 589504CF1DCDDB6900B29F64 /* SkyRoads.xcdatamodeld */; };
 		589504D41DCDDC8400B29F64 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504D31DCDDC8400B29F64 /* InitialViewController.swift */; };
 		589504D61DCDDD1400B29F64 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504D51DCDDD1400B29F64 /* GameViewController.swift */; };
@@ -38,10 +33,6 @@
 		589504A91DCDD8DA00B29F64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		589504AC1DCDD8DA00B29F64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		589504AE1DCDD8DA00B29F64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		589504B41DCDD93200B29F64 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		589504B51DCDD93200B29F64 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		589504B61DCDD93200B29F64 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		589504B71DCDD93200B29F64 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		589504BC1DCDDA2200B29F64 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		589504BD1DCDDA2200B29F64 /* CoreDataFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataFunctions.swift; sourceTree = "<group>"; };
 		589504BE1DCDDA2200B29F64 /* HS+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HS+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -49,8 +40,6 @@
 		589504C01DCDDA2200B29F64 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		589504C11DCDDA2200B29F64 /* Netw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Netw.swift; sourceTree = "<group>"; };
 		589504C21DCDDA2200B29F64 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		589504CA1DCDDA7000B29F64 /* SkyRoads-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SkyRoads-Bridging-Header.h"; sourceTree = "<group>"; };
-		589504CB1DCDDA7000B29F64 /* bridgee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bridgee.m; sourceTree = "<group>"; };
 		589504D01DCDDB6900B29F64 /* SkyRoads.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SkyRoads.xcdatamodel; sourceTree = "<group>"; };
 		589504D31DCDDC8400B29F64 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		589504D51DCDDD1400B29F64 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -61,10 +50,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				589504B91DCDD93200B29F64 /* FBSDKShareKit.framework in Frameworks */,
-				589504BA1DCDD93200B29F64 /* FBSDKCoreKit.framework in Frameworks */,
-				589504B81DCDD93200B29F64 /* FBSDKLoginKit.framework in Frameworks */,
-				589504BB1DCDD93200B29F64 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,10 +61,6 @@
 			children = (
 				5895049F1DCDD8DA00B29F64 /* SkyRoads */,
 				5895049E1DCDD8DA00B29F64 /* Products */,
-				589504B41DCDD93200B29F64 /* FBSDKLoginKit.framework */,
-				589504B51DCDD93200B29F64 /* FBSDKShareKit.framework */,
-				589504B61DCDD93200B29F64 /* FBSDKCoreKit.framework */,
-				589504B71DCDD93200B29F64 /* Bolts.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,8 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				58500F061DCE0953007B66E7 /* Reachability.swift */,
-				589504CB1DCDDA7000B29F64 /* bridgee.m */,
-				589504CA1DCDDA7000B29F64 /* SkyRoads-Bridging-Header.h */,
 				589504C11DCDDA2200B29F64 /* Netw.swift */,
 			);
 			name = Networking;
@@ -186,7 +165,7 @@
 			};
 			buildConfigurationList = 589504981DCDD8DA00B29F64 /* Build configuration list for PBXProject "SkyRoads" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -224,7 +203,6 @@
 				589504C51DCDDA2200B29F64 /* HS+CoreDataClass.swift in Sources */,
 				589504D41DCDDC8400B29F64 /* InitialViewController.swift in Sources */,
 				58500F071DCE0953007B66E7 /* Reachability.swift in Sources */,
-				589504CC1DCDDA7000B29F64 /* bridgee.m in Sources */,
 				589504D11DCDDB6900B29F64 /* SkyRoads.xcdatamodeld in Sources */,
 				589504C81DCDDA2200B29F64 /* Netw.swift in Sources */,
 				589504C91DCDDA2200B29F64 /* TableViewController.swift in Sources */,
@@ -356,9 +334,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ForeverKnights.SkyRoads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SkyRoads/SkyRoads-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -377,8 +354,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ForeverKnights.SkyRoads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SkyRoads/SkyRoads-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

@@ -14,7 +14,7 @@ struct Const {
 	static var highScores:[Int]=[]
 	static var CDscores:[HS]=[]
 	static var CDcount:Int!
-	static var actView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    static var actView = UIActivityIndicatorView(style: .gray)
 	static var speed:Int = 0
 	static var cVC:UIViewController!
 	static var name:String!
@@ -57,7 +57,7 @@ func gameOverAlert(score:Int,VC:UIViewController,message:String){
 	let fb = UIAlertAction(title: "share on FB", style: .default) { (action) in
 		if(Reachability()?.isReachable)!{
 			//freeze(flag: true, VC: VC)
-			Netw().share(VC: VC)
+		
 			//VC.dismiss(animated: true,completion: nil)
 		}
 		else{

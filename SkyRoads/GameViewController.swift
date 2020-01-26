@@ -80,7 +80,7 @@ class GameViewController: UIViewController,SCNPhysicsContactDelegate {
 		}
 		freeze(flag: false, VC: self)
 	}
-    func handleTap(_ gestureRecognize: UIGestureRecognizer) {
+    @objc func handleTap(_ gestureRecognize: UIGestureRecognizer) {
         // retrieve the SCNView
         let scnView = self.view as! SCNView
         
@@ -114,21 +114,24 @@ class GameViewController: UIViewController,SCNPhysicsContactDelegate {
             SCNTransaction.commit()
         }
     }
-	func swiped(_ gestureRecognize: UISwipeGestureRecognizer){
+    @objc func swiped(_ gestureRecognize: UISwipeGestureRecognizer){
 		
 		switch gestureRecognize.direction {
-		case UISwipeGestureRecognizerDirection.left :
+        case UISwipeGestureRecognizer.Direction.left :
 			ship.runAction(SCNAction.moveBy(x: -12, y: 0, z: 0, duration: 0.2), completionHandler: {
 				if self.ship.position.x < -13 && self.ship.position.y < 0.6 {
 					self.ship.runAction(SCNAction.moveBy(x: 0, y: -12, z: 0, duration: 0.2), completionHandler: nil)
 					print("game over")
-					self.gameOver()
+                    DispatchQueue.main.async {
+                        self.gameOver()
+                    }
+					
 					
 				}
 				}
 			)
 			print(self.ship.position.y)
-		case UISwipeGestureRecognizerDirection.right :
+        case UISwipeGestureRecognizer.Direction.right :
 			ship.runAction(SCNAction.moveBy(x: 12, y: 0, z: 0, duration: 0.2), completionHandler: {
 				if self.ship.position.x > 13 && self.ship.position.y < 0.6 {
 						self.ship.runAction(SCNAction.moveBy(x: 0, y: -12, z: 0, duration: 0.2), completionHandler: nil)
@@ -139,7 +142,7 @@ class GameViewController: UIViewController,SCNPhysicsContactDelegate {
 			}
 			)
 			print(self.ship.position.y)
-		case UISwipeGestureRecognizerDirection.up :
+        case UISwipeGestureRecognizer.Direction.up :
 			if ship.position.y < 0.6{
 				let moveUp = SCNAction.moveBy(x: 0, y: 12, z: 0, duration: 0.5)
 				moveUp.timingMode = SCNActionTimingMode.easeOut;
@@ -149,7 +152,7 @@ class GameViewController: UIViewController,SCNPhysicsContactDelegate {
 				ship.runAction(moveSequence, completionHandler: nil)
 			}
 			print("up")
-		case UISwipeGestureRecognizerDirection.down :
+        case UISwipeGestureRecognizer.Direction.down :
 			print("down")
 		default:
 			return
@@ -174,7 +177,7 @@ class GameViewController: UIViewController,SCNPhysicsContactDelegate {
         }
     }
 	
-	func update4t(timer:Timer) -> Void {
+    @objc func update4t(timer:Timer) -> Void {
 		if !paused{
 			gameTime += interval1
 			let o4=obs(pos: SCNVector3(Int(arc4random_uniform(4))*6-12,3,-400), vel: SCNVector3(0,0,100))
@@ -257,11 +260,34 @@ class GameViewController: UIViewController,SCNPhysicsContactDelegate {
 				Const.highScores.remove(at: 4)
 				Const.highScores.append(score)
 				 mes="your Score:\(score) \n New Highscore!"
-				storeScore(score: score)
+//                DispatchQueue.main.async {
+                    storeScore(score: self.score)
+//                }
+				
 				break
 			}
 		
 		}
-		gameOverAlert(score: score, VC: self,message: mes)
+//		gameOverAlert(score: score, VC: self,message: mes)
+        let alertController = UIAlertController(title: "Game Over!", message: mes, preferredStyle: .alert)
+        
+        let OKAction = UIAlertAction(title: "MainMenu", style: .default) { (action) in self.dismiss(animated: true, completion: nil)}
+        alertController.addAction(OKAction)
+        let fb = UIAlertAction(title: "share on FB", style: .default) { (action) in
+            if(Reachability()?.isReachable)!{
+                //freeze(flag: true, VC: VC)
+            
+                //VC.dismiss(animated: true,completion: nil)
+            }
+            else{
+            Launch4NoNet(VC: self,todismiss: true)
+            }
+        
+        }
+        alertController.addAction(fb)
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true) {}
+        }
+        
 	}
 }
