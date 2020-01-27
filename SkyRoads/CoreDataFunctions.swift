@@ -26,39 +26,25 @@ func getScores () {
 
 		Const.CDcount=Const.CDscores.count
 		print ("num of results = \(Const.CDscores.count)")
-		
-		
+	
 		for s in Const.CDscores as [NSManagedObject]{
 	
 			Const.highScores.append( s.value(forKey: "hscore") as! Int)
 		
 		}
-		
-		
 	} catch {
 		print("Error with request: \(error)")
 	}
-	if Const.highScores.count<5{
-		while true {
-			Const.highScores.append(0)
-			if Const.highScores.count == 5{
-			break
-			}
-		}
-	
-	
-	}
 }
-func storeScore (score:Int) {
+func storeScore (score:Int, date: Date) {
 	let context = getContext()
 	
 	let entity =  NSEntityDescription.entity(forEntityName: "HS", in: context)
 	
 	let hs = NSManagedObject(entity: entity!, insertInto: context)
 	hs.setValue(score, forKey: "hscore")
-	
-	
-	
+    hs.setValue(date, forKey: "date")
+
 	do {
 		try context.save()
 		

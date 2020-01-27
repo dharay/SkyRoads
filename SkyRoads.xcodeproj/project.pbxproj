@@ -22,7 +22,24 @@
 		589504D11DCDDB6900B29F64 /* SkyRoads.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 589504CF1DCDDB6900B29F64 /* SkyRoads.xcdatamodeld */; };
 		589504D41DCDDC8400B29F64 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504D31DCDDC8400B29F64 /* InitialViewController.swift */; };
 		589504D61DCDDD1400B29F64 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589504D51DCDDD1400B29F64 /* GameViewController.swift */; };
+		5BFBF48D23DDBD3A0015940C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFBF48C23DDBD3A0015940C /* RxSwift.framework */; };
+		5BFBF48E23DDBD3A0015940C /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFBF48C23DDBD3A0015940C /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5BFBF49123DEF22C0015940C /* MainMenuButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFBF49023DEF22C0015940C /* MainMenuButtons.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5BFBF48F23DDBD3A0015940C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5BFBF48E23DDBD3A0015940C /* RxSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		58500F061DCE0953007B66E7 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -43,6 +60,8 @@
 		589504D01DCDDB6900B29F64 /* SkyRoads.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SkyRoads.xcdatamodel; sourceTree = "<group>"; };
 		589504D31DCDDC8400B29F64 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		589504D51DCDDD1400B29F64 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5BFBF48C23DDBD3A0015940C /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		5BFBF49023DEF22C0015940C /* MainMenuButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BFBF48D23DDBD3A0015940C /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +81,7 @@
 			children = (
 				5895049F1DCDD8DA00B29F64 /* SkyRoads */,
 				5895049E1DCDD8DA00B29F64 /* Products */,
+				5BFBF48B23DDBD3A0015940C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +96,7 @@
 		5895049F1DCDD8DA00B29F64 /* SkyRoads */ = {
 			isa = PBXGroup;
 			children = (
+				5BFBF49023DEF22C0015940C /* MainMenuButtons.swift */,
 				586D2C871DCF2047000F738E /* SkyRoads.entitlements */,
 				589504CD1DCDDB0E00B29F64 /* Networking */,
 				589504A01DCDD8DA00B29F64 /* AppDelegate.swift */,
@@ -120,6 +142,14 @@
 			name = support;
 			sourceTree = "<group>";
 		};
+		5BFBF48B23DDBD3A0015940C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BFBF48C23DDBD3A0015940C /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,6 +160,7 @@
 				589504991DCDD8DA00B29F64 /* Sources */,
 				5895049A1DCDD8DA00B29F64 /* Frameworks */,
 				5895049B1DCDD8DA00B29F64 /* Resources */,
+				5BFBF48F23DDBD3A0015940C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,6 +236,7 @@
 				58500F071DCE0953007B66E7 /* Reachability.swift in Sources */,
 				589504D11DCDDB6900B29F64 /* SkyRoads.xcdatamodeld in Sources */,
 				589504C81DCDDA2200B29F64 /* Netw.swift in Sources */,
+				5BFBF49123DEF22C0015940C /* MainMenuButtons.swift in Sources */,
 				589504C91DCDDA2200B29F64 /* TableViewController.swift in Sources */,
 				589504A11DCDD8DA00B29F64 /* AppDelegate.swift in Sources */,
 				589504C41DCDDA2200B29F64 /* CoreDataFunctions.swift in Sources */,
@@ -329,6 +361,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SkyRoads/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -349,6 +382,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SkyRoads/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

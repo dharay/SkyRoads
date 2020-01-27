@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZZN-ds-J1F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZZN-ds-J1F">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TimesNewRoman.ttf">
+            <string>.SFUI-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController storyboardIdentifier="game" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BV1-FR-VrT" customClass="GameViewController" customModule="SkyRoads" customModuleProvider="target" sceneMemberID="viewController">
                     <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DMa-uH-N1f">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </sceneKitView>
                 </viewController>
@@ -25,19 +30,19 @@
             <objects>
                 <tableViewController storyboardIdentifier="hs" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LHV-69-lQd" customClass="TableViewController" customModule="SkyRoads" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SLF-C2-2GO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="rkZ-pG-JpR" style="IBUITableViewCellStyleDefault" id="udb-kJ-DRo">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="udb-kJ-DRo" id="GQZ-gx-ndd">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rkZ-pG-JpR">
-                                            <frame key="frameInset" minX="15" width="345" height="43"/>
+                                            <rect key="frame" x="20" y="0.0" width="374" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -73,41 +78,65 @@
                         <viewControllerLayoutGuide type="bottom" id="DcG-3s-zpp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="12z-MX-Rcn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hqJ-Gc-9BK">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hqJ-Gc-9BK">
+                                <rect key="frame" x="30" y="532" width="354" height="300"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4G-fO-sGw">
-                                        <color key="backgroundColor" red="0.75819627000000001" green="0.97734939030000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                        <state key="normal" title="high scores"/>
-                                        <connections>
-                                            <action selector="highscore:" destination="bvY-Hk-3Eb" eventType="touchUpInside" id="bl5-kK-QsB"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZT-gT-x12">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZT-gT-x12" customClass="MainMenuButtons" customModule="SkyRoads" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="135"/>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.2789284098" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                        <state key="normal" title="play"/>
+                                        <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="37"/>
+                                        <state key="normal" title="Play"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderAlpha">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerSize">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="playy:" destination="bvY-Hk-3Eb" eventType="touchUpInside" id="9mb-mQ-fd7"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xch-vi-4SF">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4G-fO-sGw" customClass="MainMenuButtons" customModule="SkyRoads" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="165" width="354" height="135"/>
                                         <color key="backgroundColor" red="0.75819627000000001" green="0.97734939030000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                        <state key="normal" title="quit"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="37"/>
+                                        <state key="normal" title="High scores"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderAlpha">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerSize">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="quit:" destination="bvY-Hk-3Eb" eventType="touchUpInside" id="WuW-Tt-jkO"/>
+                                            <action selector="highscore:" destination="bvY-Hk-3Eb" eventType="touchUpInside" id="bl5-kK-QsB"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="JCV-rc-5Xw"/>
+                                    <constraint firstAttribute="height" constant="300" id="JCV-rc-5Xw"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvt-me-UVT">
+                                <rect key="frame" x="107" y="113" width="200" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="BSO-bB-Vm3"/>
                                     <constraint firstAttribute="width" constant="200" id="fzI-TX-8h6"/>
@@ -115,7 +144,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="SkyRoads">
                                         <attributes>
-                                            <font key="NSFont" size="28" name="Papyrus"/>
+                                            <font key="NSFont" size="38" name="Papyrus"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -123,6 +152,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gyd-Tz-cQx">
+                                <rect key="frame" x="192" y="467" width="204" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Qcn-dQ-RSV"/>
                                     <constraint firstAttribute="width" constant="200" id="dCa-ha-rzZ"/>
@@ -132,15 +162,17 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ship speed:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9Z-eS-KYZ">
+                                <rect key="frame" x="20" y="462" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="HsP-mY-yUF"/>
-                                    <constraint firstAttribute="height" constant="15" id="ykq-YB-Eeg"/>
+                                    <constraint firstAttribute="height" constant="30" id="ykq-YB-Eeg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a80-f6-twZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a80-f6-twZ">
+                                <rect key="frame" x="209" y="255" width="125" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="8cU-qW-VjH"/>
                                     <constraint firstAttribute="height" constant="25" id="fSJ-a4-YME"/>
@@ -150,24 +182,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tvt-me-UVT" firstAttribute="centerX" secondItem="12z-MX-Rcn" secondAttribute="centerX" id="2zE-0I-Ajb"/>
-                            <constraint firstItem="a80-f6-twZ" firstAttribute="top" secondItem="WZ1-x9-9m1" secondAttribute="bottom" constant="80" id="4Na-Qj-MaV"/>
-                            <constraint firstItem="hqJ-Gc-9BK" firstAttribute="top" secondItem="z9Z-eS-KYZ" secondAttribute="bottom" constant="10" id="DPX-RM-o2l"/>
-                            <constraint firstItem="hqJ-Gc-9BK" firstAttribute="leading" secondItem="12z-MX-Rcn" secondAttribute="leading" id="EdX-94-oPP"/>
+                            <constraint firstItem="a80-f6-twZ" firstAttribute="top" secondItem="WZ1-x9-9m1" secondAttribute="bottom" constant="167" id="4Na-Qj-MaV"/>
+                            <constraint firstItem="hqJ-Gc-9BK" firstAttribute="top" secondItem="z9Z-eS-KYZ" secondAttribute="bottom" constant="40" id="DPX-RM-o2l"/>
+                            <constraint firstItem="hqJ-Gc-9BK" firstAttribute="leading" secondItem="12z-MX-Rcn" secondAttribute="leading" constant="30" id="EdX-94-oPP"/>
                             <constraint firstItem="Gyd-Tz-cQx" firstAttribute="trailing" secondItem="12z-MX-Rcn" secondAttribute="trailingMargin" id="Qnn-OE-zhY"/>
-                            <constraint firstItem="a80-f6-twZ" firstAttribute="centerX" secondItem="12z-MX-Rcn" secondAttribute="centerX" id="iUI-jP-tGF"/>
-                            <constraint firstItem="DcG-3s-zpp" firstAttribute="top" secondItem="hqJ-Gc-9BK" secondAttribute="bottom" id="n15-70-wpA"/>
-                            <constraint firstItem="tvt-me-UVT" firstAttribute="top" secondItem="WZ1-x9-9m1" secondAttribute="bottom" id="nlj-7s-2bV"/>
-                            <constraint firstItem="hqJ-Gc-9BK" firstAttribute="top" secondItem="Gyd-Tz-cQx" secondAttribute="bottom" constant="10" id="vcJ-5J-pbe"/>
-                            <constraint firstAttribute="trailing" secondItem="hqJ-Gc-9BK" secondAttribute="trailing" id="wh6-L2-TdW"/>
+                            <constraint firstItem="a80-f6-twZ" firstAttribute="centerX" secondItem="12z-MX-Rcn" secondAttribute="centerX" constant="64.5" id="iUI-jP-tGF"/>
+                            <constraint firstItem="DcG-3s-zpp" firstAttribute="top" secondItem="hqJ-Gc-9BK" secondAttribute="bottom" constant="30" id="n15-70-wpA"/>
+                            <constraint firstItem="tvt-me-UVT" firstAttribute="top" secondItem="WZ1-x9-9m1" secondAttribute="bottom" constant="25" id="nlj-7s-2bV"/>
+                            <constraint firstItem="hqJ-Gc-9BK" firstAttribute="top" secondItem="Gyd-Tz-cQx" secondAttribute="bottom" constant="40" id="vcJ-5J-pbe"/>
+                            <constraint firstAttribute="trailing" secondItem="hqJ-Gc-9BK" secondAttribute="trailing" constant="30" id="wh6-L2-TdW"/>
                             <constraint firstItem="z9Z-eS-KYZ" firstAttribute="leading" secondItem="12z-MX-Rcn" secondAttribute="leadingMargin" id="zxz-dq-AZz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="guk-OU-JpD"/>
                     <connections>
+                        <outlet property="highScoreButton" destination="F4G-fO-sGw" id="lua-Ce-fIB"/>
                         <outlet property="labell" destination="a80-f6-twZ" id="Ndd-cT-y8e"/>
+                        <outlet property="playButton" destination="hZT-gT-x12" id="1rQ-uy-a27"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gP3-sZ-bFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -180,7 +214,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZZN-ds-J1F" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RUh-Ny-gcv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

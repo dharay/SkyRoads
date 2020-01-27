@@ -8,8 +8,6 @@
 import Foundation
 import UIKit
 import CoreData
-//import FBSDKLoginKit
-
 
 class InitialViewController: UIViewController{
 	
@@ -20,35 +18,34 @@ class InitialViewController: UIViewController{
 	var outflag = false
 
     override func viewDidLoad() {
+        
 		if prefs.value(forKey: "name") == nil{prefs.set("name", forKey: "name")}
 		
         super.viewDidLoad()
 		
-		
 		navigationItem.title="Main Menu"
 		navigationController?.isNavigationBarHidden=false
 		getScores()
+        playButton.isHidden = true
+        slideAnimate(self.playButton)
+        slideAnimate(self.highScoreButton, direction: .right)
 
-		
     }
-	
-	
-	
+
 	@IBOutlet weak var labell: UILabel!
 	
-	
-	
-	
-	
-	@IBAction func speedChange(_ sender: AnyObject) {
+    @IBOutlet weak var highScoreButton: MainMenuButtons!
+    @IBOutlet weak var playButton: MainMenuButtons!
+    @IBAction func speedChange(_ sender: AnyObject) {
 		Const.speed = Int((sender as! UISlider).value)
 		
 	}
 	
-
 	override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
 		Const.cVC = self
 		freeze(flag: false, VC: self)
+       
 	
 	}
 	@IBAction func highscore(_ sender: AnyObject) {
@@ -58,13 +55,15 @@ class InitialViewController: UIViewController{
 	}
     
 	@IBAction func playy(_ sender: AnyObject) {
-		let game = storyboard?.instantiateViewController(withIdentifier: "game")
+		let game = storyboard?.instantiateViewController(withIdentifier: "game") as? GameViewController
+        game?.modalPresentationStyle = .fullScreen
+        game?.highScoreClosure = {
+            
+            self.highscore(self.labell)
+        }
 		self.present(game!, animated: true, completion: nil)
 	}
 
-	@IBAction func quit(_ sender: AnyObject) {
-		exit(0)
-	}
     @objc func noNet(){
 	Launch4NoNet(VC: self,todismiss: false)
 	}
@@ -78,5 +77,30 @@ class InitialViewController: UIViewController{
 		
 		}
 	}
-
+    private func slideAnimate(_ view: UIView, direction: SlideDirection = .left) {
+        let animation = CAKeyframeAnimation()
+        let initialValue = direction == .left ? -200 : 200
+        let midValue  = direction == .left ? 50 : -50
+//        view.frame = view.frame.offsetBy(dx: CGFloat(integerLiteral: initialValue), dy: 0)
+        view.isHidden = false
+        animation.keyPath = "position.x"
+        animation.values = [initialValue, midValue, 0]
+//        animation.keyTimes = [0, 0.5, 0,5]
+        animation.duration = 2
+        animation.isAdditive = true
+        animation.timingFunctions = Array.init(repeating: .init(name: CAMediaTimingFunctionName.easeInEaseOut), count: 3)
+        //[.init(name: CAMediaTimingFunctionName.easeInEaseOut)]
+        view.layer.add(animation, forKey: "move")
+    }
+    enum SlideDirection {
+        case left
+        case right
+        
+        func toggled() -> SlideDirection {
+            if self == .left {
+                return SlideDirection.right
+            }
+            return SlideDirection.left
+        }
+    }
 }

@@ -17,5 +17,6 @@ extension HS {
     }
 
     @NSManaged public var hscore: Int64
+    @NSManaged public var date: Date
 
 }
