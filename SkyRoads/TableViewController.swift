@@ -8,16 +8,55 @@
 
 import UIKit
 import RxSwift
+import RxRelay
+import Foundation
 
 class TableViewController: UITableViewController {
-    let visibleScore = Observable.from(Const.CDscores)
+    let visibleScore: BehaviorRelay<[HS]> = BehaviorRelay(value: [])//= Observable.from(Const.CDscores)
+    private let disposeBag = DisposeBag()
     let sorterManager = SorterManager()
     let dateManager = DateManager()
+//    var visibleScoreData = "A"
+    let sorter = UIPickerView(frame: CGRect(x: 0, y: 0, width: 300, height: 150))
+    let datePicker = UIPickerView(frame: CGRect(x: 0, y: 0, width: 300, height: 150))
     override func viewDidLoad() {
         super.viewDidLoad()
+        //  row == 0 ? "Show All time" : "Show today"
+        //  row == 0 ? "Sort by value" : "Sort by date"
+        
 
-		
-		Const.highScores.sort{$0>$1}
+        sorterManager.closure = {(row) in
+//            let sortRow = self.sorter.selectedRow(inComponent: 0)
+            if row == 0 {
+                self.visibleScore.accept(self.visibleScore.value.sorted(by: {$0.hscore > $1.hscore}))
+                
+            } else {
+                self.visibleScore.accept(self.visibleScore.value.sorted(by: {$0.date > $1.date}))
+            }
+            
+        }
+        dateManager.closure = {(row) in
+            let sortRow = self.sorter.selectedRow(inComponent: 0)
+            if row == 0 {
+                self.visibleScore.accept(Const.CDscores)
+                
+            } else {
+                self.visibleScore.accept(self.visibleScore.value.filter({ Calendar.current.isDateInToday($0.date) }))
+            }
+            self.sorterManager.closure(sortRow)
+            
+        }
+        
+        visibleScore.asObservable()
+        .subscribe(onNext: { //2
+          [unowned self] value in
+            print(value)
+            self.tableView.reloadData()
+        })
+        .disposed(by: disposeBag) //3
+        dateManager.closure(0)
+        
+//		Const.highScores.sort{$0>$1}
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
@@ -39,20 +78,26 @@ class TableViewController: UITableViewController {
         return 1
     }
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let view = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-//        view.backgroundColor = .cyan
-//
-        let sorter = UIPickerView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+
+        
         sorter.dataSource = self.sorterManager
         sorter.delegate = self.sorterManager
         sorter.backgroundColor = .red
-        let stack = UIStackView(arrangedSubviews: [sorter])
-        stack.backgroundColor = .orange
-//        view.addSubview(stack)
-//        stack.frame = tableView.headerView(forSection: section)!.frame
+//        let stack = UIStackView(arrangedSubviews: [sorter])
+//        stack.backgroundColor = .orange
+
+ 
+        datePicker.dataSource = self.dateManager
+        datePicker.delegate = self.dateManager
+        datePicker.backgroundColor = .orange
+//        let stack = UIStackView(arrangedSubviews: [sorter,datePicker])
+//        stack.backgroundColor = .orange
+        
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier:
         "sectionHeader") as! MyCustomHeader
         view.stack.addArrangedSubview(sorter)
+        view.stack.addArrangedSubview(datePicker)
+        
         view.backgroundColor = .cyan
         return view
     }
@@ -61,14 +106,14 @@ class TableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 30
+        return visibleScore.value.count
     }
 
 	
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-		cell.textLabel?.text="5"
-        cell.detailTextLabel?.text = Const.CDscores[indexPath.row].date.description
+        cell.textLabel?.text = visibleScore.value[indexPath.row].hscore.description
+        cell.detailTextLabel?.text = visibleScore.value[indexPath.row].date.description.dropLast(5).description
         // Configure the cell...
 
         return cell
@@ -78,6 +123,9 @@ class TableViewController: UITableViewController {
  
 }
 class SorterManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    var closure: (Int) -> Void = {_ in }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -86,23 +134,30 @@ class SorterManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
         return 2
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return row == 1 ? "sort by date" : "sort by value"
+        return row == 0 ? "Sort by value" : "Sort by date"
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        closure(row)
     }
     
     
 }
 class DateManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-           return 1
-       }
-       
-       func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-           return 2
-       }
-       func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-           return row == 1 ? "sort by date" : "sort by value"
-       }
+    var closure: (Int) -> Void = {_ in }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 2
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return row == 0 ? "Show All time" : "Show today"
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        closure(row)
+    }
     
 }
 
@@ -121,8 +176,9 @@ class MyCustomHeader: UITableViewHeaderFooterView {
     
     func configureContents() {
         stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.backgroundColor = .red
-
+        stack.backgroundColor = .green
+        stack.distribution = .fillEqually
+        stack.axis = .vertical
         contentView.addSubview(stack)
         
 

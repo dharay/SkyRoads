@@ -260,10 +260,10 @@ class GameViewController: UIViewController,SCNPhysicsContactDelegate {
         scene.isPaused=true
         paused=true
         
-        for s in 0...4{
-            if score > Const.highScores[s]{
-                Const.highScores.remove(at: 4)
-                Const.highScores.append(score)
+        for s in Const.CDscores{
+            if score > s.hscore {
+//                Const.highScores.remove(at: 4)
+//                Const.highScores.append(score)
                 mes="your Score:\(score) \n New Highscore!"
                 
 //                storeScore(score: self.score, date: Date())

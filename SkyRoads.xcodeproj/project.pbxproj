@@ -25,6 +25,8 @@
 		5BFBF48D23DDBD3A0015940C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFBF48C23DDBD3A0015940C /* RxSwift.framework */; };
 		5BFBF48E23DDBD3A0015940C /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFBF48C23DDBD3A0015940C /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5BFBF49123DEF22C0015940C /* MainMenuButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFBF49023DEF22C0015940C /* MainMenuButtons.swift */; };
+		5BFBF49323DF38010015940C /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFBF49223DF38010015940C /* RxRelay.framework */; };
+		5BFBF49423DF38010015940C /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFBF49223DF38010015940C /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5BFBF49423DF38010015940C /* RxRelay.framework in Embed Frameworks */,
 				5BFBF48E23DDBD3A0015940C /* RxSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -62,6 +65,7 @@
 		589504D51DCDDD1400B29F64 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5BFBF48C23DDBD3A0015940C /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		5BFBF49023DEF22C0015940C /* MainMenuButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuButtons.swift; sourceTree = "<group>"; };
+		5BFBF49223DF38010015940C /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BFBF49323DF38010015940C /* RxRelay.framework in Frameworks */,
 				5BFBF48D23DDBD3A0015940C /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +150,7 @@
 		5BFBF48B23DDBD3A0015940C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5BFBF49223DF38010015940C /* RxRelay.framework */,
 				5BFBF48C23DDBD3A0015940C /* RxSwift.framework */,
 			);
 			name = Frameworks;

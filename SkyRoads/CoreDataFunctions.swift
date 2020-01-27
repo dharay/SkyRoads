@@ -38,7 +38,7 @@ func getScores () {
 }
 func storeScore (score:Int, date: Date) {
 	let context = getContext()
-	
+//    Const.CDscores.append(<#T##newElement: HS##HS#>)
 	let entity =  NSEntityDescription.entity(forEntityName: "HS", in: context)
 	
 	let hs = NSManagedObject(entity: entity!, insertInto: context)
@@ -54,4 +54,5 @@ func storeScore (score:Int, date: Date) {
 	} catch {
 		
 	}
+    getScores()
 }
