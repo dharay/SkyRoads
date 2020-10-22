@@ -1,5 +1,5 @@
 ### INTRO
-An infinite runner game similar to temple run but theme of sky roads🚀 made in scene kit.
+An infinite runner game similar to temple run but theme of sky roads🚀 made in scene kit. Xcode - swift.
 
 ### Build
 
